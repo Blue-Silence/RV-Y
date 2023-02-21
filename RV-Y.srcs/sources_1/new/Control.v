@@ -24,7 +24,7 @@ module Control(
             input [6:0] opcode,
             input [6:0] funct7,
             input [2:0] funct3,
-            output undefine_yet
+            output [2:0] instrType //000:R ; 001:I ; 010:S ; 011:B ; 100:U ; 101:J
     );
     //Undefined.
 

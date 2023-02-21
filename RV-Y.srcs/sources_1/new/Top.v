@@ -39,10 +39,12 @@ module Top(
     wire [63:0] branchInB;
     wire [1:0] branchType;
     wire [63:0] pc;
+    wire [63:0] branchRd;
     
     
     //MemAccessUnit
     wire memRegE;
+    wire memWE;
     wire [63:0] memIn;
     wire [63:0] memOut;
     
@@ -58,8 +60,62 @@ module Top(
     wire [63:0] regIn;
     wire regWE;
     
+    //Control
+    wire [2:0] instrType;
+    wire [1:0] instrFlowType;
+    
+    
+    Control ctrl (  
+                    .opcode(),
+                    .funct7(),
+                    .funct3(),
+                    .instrType(instrType),
+                    .instrFlowType(instrFlowType)
+                );
+    
     
     wire [63:0] immI,immS,immB,immU,immJ;
     ImmConstr immModle (instr,immI,immS,immB,immU,immJ);
-    
+    assign imm = (instrType == 3'b001) ? immI : 
+                 (instrType == 3'b010) ? immS : 
+                 (instrType == 3'b011) ? immB :
+                 (instrType == 3'b100) ? immU :
+                 (instrType == 3'b101) ? immJ :
+                 64'bx;
+
+    BranchUnit BU (
+                    .bT(instrFlowType),
+                    .funct3(),
+                    .clk(clk),
+                    .offset(imm),
+                    .SrcA(regOutA),
+                    .SrcB(regOutB),
+                    .pc(pc),
+                    .rd(branchRd)
+                );
+
+    ALU aluM (
+                    .funct3(funct3),
+                    .funct7(funct7),
+                    .SrcA(aluInA),
+                    .SrcB(aluInB),
+                    .Result(aluResult)
+                    );
+
+    MemAccessUnit MAU (
+                    .offset(imm),
+                    .regE(memRegE),
+                    .regVal(regOutA),
+                    .In(memIn),
+                    .MemWE(memWE),
+                    .clk(clk),
+                    .Out(memOut)
+                    );
+
+    InstrFetchUnit IFU (
+                    .pc(pc),
+                    .clk(clk),
+                    .instr(instr)
+                    );
+
 endmodule
