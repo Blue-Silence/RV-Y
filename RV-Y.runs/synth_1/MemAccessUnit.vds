@@ -1,0 +1,441 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Feb 21 22:28:43 2023
+# Process ID: 53704
+# Current directory: E:/Programming/RV-Y/RV-Y.runs/synth_1
+# Command line: vivado.exe -log MemAccessUnit.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MemAccessUnit.tcl
+# Log file: E:/Programming/RV-Y/RV-Y.runs/synth_1/MemAccessUnit.vds
+# Journal file: E:/Programming/RV-Y/RV-Y.runs/synth_1\vivado.jou
+# Running On: LAPTOP-2JAIP2V1, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 17024 MB
+#-----------------------------------------------------------
+source MemAccessUnit.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental E:/Programming/RV-Y/RV-Y.srcs/utils_1/imports/synth_1/No.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from E:/Programming/RV-Y/RV-Y.srcs/utils_1/imports/synth_1/No.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top MemAccessUnit -part xc7a12ticsg325-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a12ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a12ti'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 52488
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [E:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 813.934 ; gain = 407.047
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'MemAccessUnit' [E:/Programming/RV-Y/RV-Y.srcs/sources_1/new/MemAccessUnit.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Mem' [E:/Programming/RV-Y/RV-Y.srcs/sources_1/new/Mem.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Mem' (0#1) [E:/Programming/RV-Y/RV-Y.srcs/sources_1/new/Mem.v:24]
+WARNING: [Synth 8-689] width (64) of port connection 'Out' does not match port width (1) of module 'Mem' [E:/Programming/RV-Y/RV-Y.srcs/sources_1/new/MemAccessUnit.v:36]
+INFO: [Synth 8-6155] done synthesizing module 'MemAccessUnit' (0#1) [E:/Programming/RV-Y/RV-Y.srcs/sources_1/new/MemAccessUnit.v:23]
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[63] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[62] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[61] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[60] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[59] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[58] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[57] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[56] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[55] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[54] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[53] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[52] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[51] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[50] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[49] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[48] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[47] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[46] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[45] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[44] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[43] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[42] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[41] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[40] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[39] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[38] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[37] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[36] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[35] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[34] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[33] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[32] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[31] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[30] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[29] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[28] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[27] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[26] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[25] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[24] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[23] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[22] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[21] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[20] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[19] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[18] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[17] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[16] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[15] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[14] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[13] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[12] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[11] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[10] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[9] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[8] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[7] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[6] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[5] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[4] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[3] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[2] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[1] driven by constant 0
+WARNING: [Synth 8-7129] Port A[63] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[62] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[61] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[60] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[59] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[58] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[57] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[56] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[55] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[54] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[53] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[52] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[51] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[50] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[49] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[48] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[47] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[46] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[45] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[44] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[43] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[42] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[41] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[40] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[39] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[38] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[37] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[36] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[35] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[34] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[33] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[32] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[31] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[30] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[29] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[28] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[27] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[26] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[25] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[24] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[23] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[22] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[21] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[20] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[19] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[18] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[17] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[16] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[15] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[14] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[5] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[4] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[3] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[2] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[1] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[0] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[63] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[62] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[61] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[60] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[59] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[58] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[57] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[56] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[55] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[54] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[53] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[52] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[51] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[50] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[49] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[48] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[47] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[46] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[45] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[44] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[43] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[42] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[41] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[40] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[39] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[38] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[37] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[36] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[35] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[34] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[33] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[32] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[31] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[30] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[29] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[28] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[27] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[26] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[25] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[24] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[23] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[22] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[21] in module Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In[20] in module Mem is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 904.398 ; gain = 497.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 904.398 ; gain = 497.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a12ticsg325-1L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 904.398 ; gain = 497.512
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a12ticsg325-1L
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6895] The reference checkpoint E:/Programming/RV-Y/RV-Y.srcs/utils_1/imports/synth_1/No.dcp is not suitable for use with incremental synthesis for this design. Please regenerate the checkpoint for this design with -incremental_synth switch in the same Vivado session that synth_design has been run. Synthesis will continue with the default flow
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 904.398 ; gain = 497.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 904.398 ; gain = 497.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 904.398 ; gain = 497.512
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : 
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    1 Bit       Adders := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 40 (col length:40)
+BRAMs: 40 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[63] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[62] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[61] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[60] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[59] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[58] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[57] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[56] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[55] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[54] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[53] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[52] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[51] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[50] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[49] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[48] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[47] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[46] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[45] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[44] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[43] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[42] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[41] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[40] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[39] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[38] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[37] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[36] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[35] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[34] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[33] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[32] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[31] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[30] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[29] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[28] driven by constant 0
+WARNING: [Synth 8-3917] design MemAccessUnit has port Out[27] driven by constant 0
+INFO: [Common 17-14] Message 'Synth 8-3917' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1066.152 ; gain = 659.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++--------------+--------------+-----------+----------------------+----------------+
+|Module Name   | RTL Object   | Inference | Size (Depth x Width) | Primitives     | 
++--------------+--------------+-----------+----------------------+----------------+
+|MemAccessUnit | dmem/mem_reg | Implied   | 256 x 1              | RAM256X1S x 1  | 
++--------------+--------------+-----------+----------------------+----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1066.152 ; gain = 659.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++--------------+--------------+-----------+----------------------+----------------+
+|Module Name   | RTL Object   | Inference | Size (Depth x Width) | Primitives     | 
++--------------+--------------+-----------+----------------------+----------------+
+|MemAccessUnit | dmem/mem_reg | Implied   | 256 x 1              | RAM256X1S x 1  | 
++--------------+--------------+-----------+----------------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1066.152 ; gain = 659.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1066.152 ; gain = 659.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1066.152 ; gain = 659.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1066.152 ; gain = 659.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1066.152 ; gain = 659.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1066.152 ; gain = 659.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1066.152 ; gain = 659.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     1|
+|2     |RAM256X1S |     1|
+|3     |IBUF      |     3|
+|4     |OBUF      |    64|
++------+----------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    69|
+|2     |  dmem   |Mem    |     1|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1066.152 ; gain = 659.266
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 563 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1066.152 ; gain = 659.266
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1066.152 ; gain = 659.266
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1078.109 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1167.281 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 1 instance 
+
+Synth Design complete, checksum: c5080e75
+INFO: [Common 17-83] Releasing license: Synthesis
+22 Infos, 202 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1167.281 ; gain = 767.082
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'E:/Programming/RV-Y/RV-Y.runs/synth_1/MemAccessUnit.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file MemAccessUnit_utilization_synth.rpt -pb MemAccessUnit_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 21 22:29:09 2023...
