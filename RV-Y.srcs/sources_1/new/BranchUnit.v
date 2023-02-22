@@ -21,7 +21,7 @@
 
 
 module BranchUnit(
-    input [1:0] bT,//some signal. 00:no branch; 01:jl; 11:jlr
+    input [1:0] bT,//some signal. 00:no branch; 01:jl; 10:conditional;  11:jlr
     input [2:0] funct3,
     input clk,
     input [63:0] offset,
@@ -43,7 +43,7 @@ module BranchUnit(
                        1'bx;
                        
     always @ (posedge clk) begin
-        if((bT == 2'b01 && condition) || bT == 2'b01)
+        if((bT == 2'b10 && condition) || bT == 2'b01)
             pc <= pc+4+offset;
         else if (bT == 2'b11)
             pc <= pc+4+SrcA;

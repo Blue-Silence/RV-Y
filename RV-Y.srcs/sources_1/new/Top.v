@@ -65,6 +65,7 @@ module Top(
     wire [1:0] instrFlowType;
     wire [1:0] resultType;
     wire [1:0] dstType;
+    wire aluImmE;
     
 //////////////////////////////////////////////
 //Instruction decode
@@ -97,7 +98,9 @@ module Top(
                     .memRegE(memRegE),
                     
                     .dstType(dstType),
-                    .resultType(resultType)
+                    .resultType(resultType),
+                    
+                    .aluImmE(aluImmE)
                 
                 );
 
@@ -112,6 +115,10 @@ module Top(
                     .pc(pc),
                     .rd(branchR)
                 );
+//////////////////////////////////////////////////////////////////
+
+    assign aluInA = regOutA;
+    assign aluInB = (aluImmE) ? imm : regOutB;
 
     ALU aluM (
                     .funct3(funct3),
@@ -145,7 +152,7 @@ module Top(
     assign regIn = (resultType == 2'b00) ? aluResult :
                    (resultType == 2'b10) ? branchR : 
                    (resultType == 2'b01) ? memOut :
-                   64'bx;
+                   imm;
                    
     RegFile RF(
                     .srcA(regSrcA),
