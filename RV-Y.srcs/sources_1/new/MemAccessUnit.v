@@ -30,7 +30,7 @@ module MemAccessUnit(
         output [63:0] Out
     );
     
-    wire addr;
+    wire [63:0] addr;
     assign addr = ((regE) ? regVal : 0)+offset;
     
     Mem dmem (addr, In, MemWE, clk,Out);

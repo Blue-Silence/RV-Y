@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 4
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a12ticsg325-1L
 
@@ -88,6 +89,7 @@ read_verilog -library xil_defaultlib {
   E:/Programming/RV-Y/RV-Y.srcs/sources_1/new/ALU.v
   E:/Programming/RV-Y/RV-Y.srcs/sources_1/new/BranchUnit.v
   E:/Programming/RV-Y/RV-Y.srcs/sources_1/new/Control.v
+  E:/Programming/RV-Y/RV-Y.srcs/sources_1/new/IMem.v
   E:/Programming/RV-Y/RV-Y.srcs/sources_1/new/ImmConstr.v
   E:/Programming/RV-Y/RV-Y.srcs/sources_1/new/InstrFetchUnit.v
   E:/Programming/RV-Y/RV-Y.srcs/sources_1/new/Mem.v

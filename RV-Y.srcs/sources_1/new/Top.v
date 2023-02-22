@@ -21,8 +21,11 @@
 
 
 module Top(
-    input clk
+    input clk,
+    input reset,
+    output re
     );
+    
     
     //All
     wire [2:0] funct3;
@@ -70,7 +73,7 @@ module Top(
 //////////////////////////////////////////////
 //Instruction decode
     assign regSrcA = instr[19:15];
-    assign regSrcA = instr[24:20];
+    assign regSrcB = instr[24:20];
     assign funct7 = instr[31:25];
     assign funct3 = instr[14:12];
     assign rd = instr[11:7];
@@ -85,6 +88,7 @@ module Top(
                  64'bx;
 
 //////////////////////////////////////////////////
+    assign re = regIn;
 
     Control ctrl (  
                     .opcode(),
@@ -96,9 +100,9 @@ module Top(
                     
                     .memWE(memWE),
                     .memRegE(memRegE),
-                    
-                    .dstType(dstType),
+
                     .resultType(resultType),
+                    .regWE(regWE),
                     
                     .aluImmE(aluImmE)
                 
@@ -113,7 +117,8 @@ module Top(
                     .SrcA(regOutA),
                     .SrcB(regOutB),
                     .pc(pc),
-                    .rd(branchR)
+                    .rd(branchR),
+                    .reset(reset)
                 );
 //////////////////////////////////////////////////////////////////
 
@@ -156,7 +161,7 @@ module Top(
                    
     RegFile RF(
                     .srcA(regSrcA),
-                    .srcB(regSrcb),
+                    .srcB(regSrcB),
                     .dst(rd),
                     .in(regIn),
                     .regWE(regWE),

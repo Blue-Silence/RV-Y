@@ -21,6 +21,7 @@
 
 
 module BranchUnit(
+    input reset,
     input [1:0] bT,//some signal. 00:no branch; 01:jl; 10:conditional;  11:jlr
     input [2:0] funct3,
     input clk,
@@ -50,5 +51,8 @@ module BranchUnit(
         else 
             pc <= pc+4;
      end
+     
+     always @ (posedge reset)
+        pc <= 0;
      
 endmodule

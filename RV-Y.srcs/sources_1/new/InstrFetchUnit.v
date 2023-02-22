@@ -26,6 +26,9 @@ module InstrFetchUnit(
         output [31:0] instr
     );
     
-    Mem imem (pc, 1'b0, 1'b0, clk, instr);
+    wire [63:0] instrArray;
+    //Mem imem (pc, 1'b0, 1'b0, clk, instrArray);
+    IMem imem (pc, 1'b0, 1'b0, clk, instrArray);
+    assign instr = (pc[2]) ? instrArray[63:32] : instrArray[31:0];
 
 endmodule

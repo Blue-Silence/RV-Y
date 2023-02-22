@@ -26,12 +26,12 @@ module Mem(
         input [63:0] In,
         input MemWE,
         input clk,
-        output Out
+        output [63:0] Out
     );
     
     reg [63:0] mem [0:255];
     wire [7:0] addr;
-    assign addr = A[13:6];
+    assign addr = A[10:3];
     
     always @ (posedge clk) begin
     if(MemWE)

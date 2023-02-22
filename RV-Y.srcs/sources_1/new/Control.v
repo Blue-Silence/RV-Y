@@ -33,8 +33,8 @@ module Control(
             output memRegE,
             
             output [1:0] resultType, //00:ALU; 01:Mem; 10:pc; 11: imm
-            output [1:0] dstType, //00:rd, others : disable  
-            
+            output regWE,
+          
             output aluImmE
     );
     //Undefined.
@@ -57,7 +57,7 @@ module Control(
     assign resultType = (opcode == 7'D3) ? 2'b01 : //Mem
                         ((opcode == 7'D103) || (opcode == 7'D111)) ? 2'b10 : //Pc
                         00; //ALU
-    assign dstType =    (opcode == 7'D3) || 
+    assign regWE =    (opcode == 7'D3) || 
                         (opcode == 7'D19) || 
                         (opcode == 7'D23) ||
                         (opcode == 7'D51) ||
@@ -66,7 +66,6 @@ module Control(
                         (opcode == 7'D111) ||
                         (opcode == 7'D27) ||
                         (opcode == 7'D59);
-                        
     
     
     
