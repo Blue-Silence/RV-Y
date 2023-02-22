@@ -23,7 +23,7 @@
 module Top(
     input clk,
     input reset,
-    output re
+    output [63:0] re
     );
     
     
@@ -34,6 +34,7 @@ module Top(
     wire [4:0] rd;
     wire [4:0] regSrcA;
     wire [4:0] regSrcB;
+    wire [6:0] opcode;
     
     //ALU
     wire [63:0] aluInA;
@@ -49,8 +50,6 @@ module Top(
     
     
     //MemAccessUnit
-    wire memRegE;
-    wire memWE;
     wire [63:0] memIn;
     wire [63:0] memOut;
     
@@ -61,14 +60,15 @@ module Top(
     wire [63:0] regOutA;
     wire [63:0] regOutB;
     wire [63:0] regIn;
-    wire regWE;
     
     //Control
     wire [2:0] instrType;
     wire [1:0] instrFlowType;
     wire [1:0] resultType;
-    wire [1:0] dstType;
     wire aluImmE;
+    wire regWE;
+    wire memRegE;
+    wire memWE;
     
 //////////////////////////////////////////////
 //Instruction decode
@@ -76,6 +76,7 @@ module Top(
     assign regSrcB = instr[24:20];
     assign funct7 = instr[31:25];
     assign funct3 = instr[14:12];
+    assign opcode = instr[6:0];
     assign rd = instr[11:7];
     
     wire [63:0] immI,immS,immB,immU,immJ;
@@ -91,9 +92,9 @@ module Top(
     assign re = regIn;
 
     Control ctrl (  
-                    .opcode(),
-                    .funct7(),
-                    .funct3(),
+                    .opcode(opcode),
+                    .funct7(funct7),
+                    .funct3(funct3),
                     
                     .instrType(instrType),
                     .instrFlowType(instrFlowType),

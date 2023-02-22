@@ -1,22 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
 // Create Date: 2023/02/21 21:18:01
-// Design Name: 
 // Module Name: BranchUnit
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
 //////////////////////////////////////////////////////////////////////////////////
 
 
@@ -43,16 +28,15 @@ module BranchUnit(
                        (funct3 == 3'b111) ? ({1'b0,SrcA} >= {1'b0,SrcB}) :
                        1'bx;
                        
-    always @ (posedge clk) begin
-        if((bT == 2'b10 && condition) || bT == 2'b01)
+    always @ (posedge clk,posedge reset) begin
+        if (reset)
+            pc <= 0;
+        else if((bT == 2'b10 && condition) || bT == 2'b01)
             pc <= pc+4+offset;
         else if (bT == 2'b11)
             pc <= pc+4+SrcA;
         else 
             pc <= pc+4;
      end
-     
-     always @ (posedge reset)
-        pc <= 0;
      
 endmodule
