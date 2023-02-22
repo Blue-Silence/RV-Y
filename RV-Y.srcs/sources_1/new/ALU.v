@@ -23,8 +23,8 @@
 module ALU(
     input [2:0] funct3,
     input [6:0] funct7,
-    input [63:0] SrcA,
-    input [63:0] SrcB,
+    input signed [63:0] SrcA,
+    input signed [63:0] SrcB,
     output [63:0] Result
     );
     

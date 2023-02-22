@@ -1,14 +1,15 @@
-
-*** Running vivado
-    with args -log Top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
-
-
-
-****** Vivado v2022.2 (64-bit)
-  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
-  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Feb 21 23:45:13 2023
+# Process ID: 31628
+# Current directory: E:/Programming/RV-Y/RV-Y.runs/synth_1
+# Command line: vivado.exe -log Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
+# Log file: E:/Programming/RV-Y/RV-Y.runs/synth_1/Top.vds
+# Journal file: E:/Programming/RV-Y/RV-Y.runs/synth_1\vivado.jou
+# Running On: LAPTOP-2JAIP2V1, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 17024 MB
+#-----------------------------------------------------------
 source Top.tcl -notrace
 Command: read_checkpoint -auto_incremental -incremental E:/Programming/RV-Y/RV-Y.srcs/utils_1/imports/synth_1/No.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from E:/Programming/RV-Y/RV-Y.srcs/utils_1/imports/synth_1/No.dcp for incremental synthesis

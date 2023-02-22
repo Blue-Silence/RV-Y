@@ -25,8 +25,8 @@ module BranchUnit(
     input [2:0] funct3,
     input clk,
     input [63:0] offset,
-    input [63:0] SrcA,
-    input [63:0] SrcB,
+    input signed [63:0] SrcA,
+    input signed [63:0] SrcB,
     output reg [63:0] pc,
     output [63:0] rd
     );
